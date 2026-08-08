@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "comment": "Animeko media source list URLs. Build job fetches these and extracts hosts.",
+  "sources": [
+    {
+      "id": "online",
+      "name": "MajoSissi online",
+      "url": "https://raw.githubusercontent.com/MajoSissi/animeko-source/main/dist/online.json",
+      "enabled": true
+    },
+    {
+      "id": "bt1",
+      "name": "creamycake BT",
+      "url": "https://sub.creamycake.org/v1/bt1.json",
+      "enabled": true
+    },
+    {
+      "id": "css1",
+      "name": "creamycake CSS",
+      "url": "https://sub.creamycake.org/v1/css1.json",
+      "enabled": true
+    }
+  ],
+  "core_domains": [
+    "animeko.org",
+    "myani.org",
+    "bgm.tv",
+    "bangumi.tv",
+    "dandanplay.net",
+    "dandanplay.com",
+    "mikanani.me",
+    "mikanime.tv",
+    "dmhy.org",
+    "acg.rip",
+    "nyaa.si",
+    "nyaa.land",
+    "creamycake.org"
+  ],
+  "hosting_rules": [
+    "DOMAIN,raw.githubusercontent.com",
+    "DOMAIN,gist.githubusercontent.com",
+    "DOMAIN-SUFFIX,githubusercontent.com",
+    "DOMAIN,github.com",
+    "DOMAIN-SUFFIX,gitee.com",
+    "DOMAIN-SUFFIX,jsdelivr.net"
+  ],
+  "exclude_suffixes": [
+    "baidu.com",
+    "bcebos.com",
+    "meituan.net",
+    "qhmsg.com",
+    "hitv.com",
+    "sf-express.com",
+    "myapp.com",
+    "3dmgame.com",
+    "loli.net",
+    "danji100.com",
+    "nanoacg.com",
+    "google.com",
+    "gstatic.com",
+    "cloudflare.com",
+    "cloudfront.net",
+    "akamaihd.net",
+    "akamaized.net",
+    "fastly.net",
+    "apple.com",
+    "icloud.com",
+    "mzstatic.com"
+  ],
+  "exclude_hosts": [
+    "img1.baidu.com",
+    "p1.ssl.qhmsg.com",
+    "s3plus.meituan.net",
+    "ugc.hitv.com",
+    "wbep-image.sf-express.com",
+    "pp.myapp.com",
+    "syimg.3dmgame.com",
+    "i.loli.net",
+    "pic.danji100.com",
+    "r2img.nanoacg.com",
+    "bkimg.cdn.bcebos.com"
+  ],
+  "user_agents": [
+    {
+      "id": "ani",
+      "pattern": "*Ani*",
+      "comment": "Animeko 曾用名 Ani；部分客户端 UA 可能含 Ani"
+    },
+    {
+      "id": "animeko",
+      "pattern": "*Animeko*",
+      "comment": "若客户端 UA 含 Animeko 则命中"
+    }
+  ],
+  "plugin": {
+    "name": "Animeko 分流",
+    "desc": "从 Animeko 数据源 JSON 自动提取域名，生成可选手动策略的分流规则。策略默认 DIRECT。CDN 播放域名需结合最新请求补全；USER-AGENT 方案默认关闭，需真机确认 UA 后再启用。",
+    "author": "beckyeeky",
+    "homepage": "https://github.com/beckyeeky/animeko-loon",
+    "icon": "https://raw.githubusercontent.com/open-ani/animeko/main/.github/assets/logo.png",
+    "tag": "分流,Animeko,直连",
+    "loon_version": "3.5.1(978)",
+    "system": "iOS,iPadOS,macOS",
+    "system_version": "15"
+  }
+}

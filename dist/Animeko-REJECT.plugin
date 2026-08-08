@@ -1,0 +1,117 @@
+#!name = Animeko 分流 (REJECT)
+#!desc = 从 Animeko 数据源 JSON 自动提取域名，生成可选手动策略的分流规则。策略默认 DIRECT。CDN 播放域名需结合最新请求补全；USER-AGENT 方案默认关闭，需真机确认 UA 后再启用。 当前构建策略固定为 REJECT。
+#!author = beckyeeky
+#!homepage = https://github.com/beckyeeky/animeko-loon
+#!icon = https://raw.githubusercontent.com/open-ani/animeko/main/.github/assets/logo.png
+#!system = iOS,iPadOS,macOS
+#!system_version = 15
+#!loon_version = 3.5.1(978)
+#!tag = 分流,Animeko,直连,REJECT
+#!type = normal
+
+[Rule]
+# generated_at: 2026-08-08T14:18:38Z
+# policy: REJECT
+# sources_ok: 3/3
+# media_roots: 75
+# iOS 不能按 App 进程分流；播放 CDN 可能不在源 JSON 内。
+
+# Animeko / Ani core services
+DOMAIN-SUFFIX,animeko.org,REJECT
+DOMAIN-SUFFIX,myani.org,REJECT
+DOMAIN-SUFFIX,bgm.tv,REJECT
+DOMAIN-SUFFIX,bangumi.tv,REJECT
+DOMAIN-SUFFIX,dandanplay.net,REJECT
+DOMAIN-SUFFIX,dandanplay.com,REJECT
+DOMAIN-SUFFIX,mikanani.me,REJECT
+DOMAIN-SUFFIX,mikanime.tv,REJECT
+DOMAIN-SUFFIX,dmhy.org,REJECT
+DOMAIN-SUFFIX,acg.rip,REJECT
+DOMAIN-SUFFIX,nyaa.si,REJECT
+DOMAIN-SUFFIX,nyaa.land,REJECT
+DOMAIN-SUFFIX,creamycake.org,REJECT
+
+# Source list hosting
+DOMAIN,raw.githubusercontent.com,REJECT
+DOMAIN,gist.githubusercontent.com,REJECT
+DOMAIN-SUFFIX,githubusercontent.com,REJECT
+DOMAIN,github.com,REJECT
+DOMAIN-SUFFIX,gitee.com,REJECT
+DOMAIN-SUFFIX,jsdelivr.net,REJECT
+
+# Media source sites extracted from source JSON
+DOMAIN-SUFFIX,11kt.net,REJECT
+DOMAIN-SUFFIX,1anime.org,REJECT
+DOMAIN-SUFFIX,1anime2026.cc,REJECT
+DOMAIN-SUFFIX,1anime2026.me,REJECT
+DOMAIN-SUFFIX,605dm.com,REJECT
+DOMAIN-SUFFIX,7sefun.top,REJECT
+DOMAIN-SUFFIX,9tdm.com,REJECT
+DOMAIN-SUFFIX,aafun.cc,REJECT
+DOMAIN-SUFFIX,acgpost.com,REJECT
+DOMAIN-SUFFIX,agedm.org,REJECT
+DOMAIN-SUFFIX,aiqingyu1314.com,REJECT
+DOMAIN-SUFFIX,akianime.cc,REJECT
+DOMAIN-SUFFIX,appmovie.click,REJECT
+DOMAIN-SUFFIX,baimaodm.com,REJECT
+DOMAIN-SUFFIX,breadio.wiki,REJECT
+DOMAIN-SUFFIX,cctv5566.cc,REJECT
+DOMAIN-SUFFIX,cycani.org,REJECT
+DOMAIN-SUFFIX,cyfz.vip,REJECT
+DOMAIN-SUFFIX,d1dm.xyz,REJECT
+DOMAIN-SUFFIX,danmuhd.com,REJECT
+DOMAIN-SUFFIX,didahd.pro,REJECT
+DOMAIN-SUFFIX,dilidili.io,REJECT
+DOMAIN-SUFFIX,dilidili.online,REJECT
+DOMAIN-SUFFIX,dmfc002.cc,REJECT
+DOMAIN-SUFFIX,dmfengche.cc,REJECT
+DOMAIN-SUFFIX,dmmiku.com,REJECT
+DOMAIN-SUFFIX,dongmandaquan.vip,REJECT
+DOMAIN-SUFFIX,eacg1.com,REJECT
+DOMAIN-SUFFIX,fengchedm1.com,REJECT
+DOMAIN-SUFFIX,fengchedonman.com,REJECT
+DOMAIN-SUFFIX,fqdm.cc,REJECT
+DOMAIN-SUFFIX,girigirilove.com,REJECT
+DOMAIN-SUFFIX,girigirilove.top,REJECT
+DOMAIN-SUFFIX,haixingdmx.com,REJECT
+DOMAIN-SUFFIX,hanime1.me,REJECT
+DOMAIN-SUFFIX,hanimeone.me,REJECT
+DOMAIN-SUFFIX,hc34567.com,REJECT
+DOMAIN-SUFFIX,hqvod.com,REJECT
+DOMAIN-SUFFIX,huolangdm2.net,REJECT
+DOMAIN-SUFFIX,ikfan.com,REJECT
+DOMAIN-SUFFIX,imandaow.com,REJECT
+DOMAIN-SUFFIX,jibi.cc,REJECT
+DOMAIN-SUFFIX,jtdm.cc,REJECT
+DOMAIN-SUFFIX,jzsdm1.com,REJECT
+DOMAIN-SUFFIX,kimivod.com,REJECT
+DOMAIN-SUFFIX,knvod.com,REJECT
+DOMAIN-SUFFIX,libvio.site,REJECT
+DOMAIN-SUFFIX,lmm68.com,REJECT
+DOMAIN-SUFFIX,mayi520.cc,REJECT
+DOMAIN-SUFFIX,mgnacg.com,REJECT
+DOMAIN-SUFFIX,mifun.org,REJECT
+DOMAIN-SUFFIX,milimili.nl,REJECT
+DOMAIN-SUFFIX,mitaodm.com,REJECT
+DOMAIN-SUFFIX,moefan.cc,REJECT
+DOMAIN-SUFFIX,mwcy.net,REJECT
+DOMAIN-SUFFIX,mxdmp.com,REJECT
+DOMAIN-SUFFIX,pekolove.net,REJECT
+DOMAIN-SUFFIX,pzlyw.com,REJECT
+DOMAIN-SUFFIX,qdm66.com,REJECT
+DOMAIN-SUFFIX,rebozj.pro,REJECT
+DOMAIN-SUFFIX,sclgvs.com,REJECT
+DOMAIN-SUFFIX,senfun.in,REJECT
+DOMAIN-SUFFIX,sisidm.com,REJECT
+DOMAIN-SUFFIX,skr2.cc,REJECT
+DOMAIN-SUFFIX,ssrfun.com,REJECT
+DOMAIN-SUFFIX,tvtfun.net,REJECT
+DOMAIN-SUFFIX,vdm5.com,REJECT
+DOMAIN-SUFFIX,wyteam.net,REJECT
+DOMAIN-SUFFIX,xdmdy.cc,REJECT
+DOMAIN-SUFFIX,xfdm.pro,REJECT
+DOMAIN-SUFFIX,yhdmya.com,REJECT
+DOMAIN-SUFFIX,yinghua2.com,REJECT
+DOMAIN-SUFFIX,youknow.tv,REJECT
+DOMAIN-SUFFIX,zgacgn.com,REJECT
+

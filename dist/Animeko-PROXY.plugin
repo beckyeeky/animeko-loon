@@ -1,0 +1,117 @@
+#!name = Animeko 分流 (PROXY)
+#!desc = 从 Animeko 数据源 JSON 自动提取域名，生成可选手动策略的分流规则。策略默认 DIRECT。CDN 播放域名需结合最新请求补全；USER-AGENT 方案默认关闭，需真机确认 UA 后再启用。 当前构建策略固定为 PROXY。
+#!author = beckyeeky
+#!homepage = https://github.com/beckyeeky/animeko-loon
+#!icon = https://raw.githubusercontent.com/open-ani/animeko/main/.github/assets/logo.png
+#!system = iOS,iPadOS,macOS
+#!system_version = 15
+#!loon_version = 3.5.1(978)
+#!tag = 分流,Animeko,直连,PROXY
+#!type = normal
+
+[Rule]
+# generated_at: 2026-08-08T14:18:38Z
+# policy: PROXY
+# sources_ok: 3/3
+# media_roots: 75
+# iOS 不能按 App 进程分流；播放 CDN 可能不在源 JSON 内。
+
+# Animeko / Ani core services
+DOMAIN-SUFFIX,animeko.org,PROXY
+DOMAIN-SUFFIX,myani.org,PROXY
+DOMAIN-SUFFIX,bgm.tv,PROXY
+DOMAIN-SUFFIX,bangumi.tv,PROXY
+DOMAIN-SUFFIX,dandanplay.net,PROXY
+DOMAIN-SUFFIX,dandanplay.com,PROXY
+DOMAIN-SUFFIX,mikanani.me,PROXY
+DOMAIN-SUFFIX,mikanime.tv,PROXY
+DOMAIN-SUFFIX,dmhy.org,PROXY
+DOMAIN-SUFFIX,acg.rip,PROXY
+DOMAIN-SUFFIX,nyaa.si,PROXY
+DOMAIN-SUFFIX,nyaa.land,PROXY
+DOMAIN-SUFFIX,creamycake.org,PROXY
+
+# Source list hosting
+DOMAIN,raw.githubusercontent.com,PROXY
+DOMAIN,gist.githubusercontent.com,PROXY
+DOMAIN-SUFFIX,githubusercontent.com,PROXY
+DOMAIN,github.com,PROXY
+DOMAIN-SUFFIX,gitee.com,PROXY
+DOMAIN-SUFFIX,jsdelivr.net,PROXY
+
+# Media source sites extracted from source JSON
+DOMAIN-SUFFIX,11kt.net,PROXY
+DOMAIN-SUFFIX,1anime.org,PROXY
+DOMAIN-SUFFIX,1anime2026.cc,PROXY
+DOMAIN-SUFFIX,1anime2026.me,PROXY
+DOMAIN-SUFFIX,605dm.com,PROXY
+DOMAIN-SUFFIX,7sefun.top,PROXY
+DOMAIN-SUFFIX,9tdm.com,PROXY
+DOMAIN-SUFFIX,aafun.cc,PROXY
+DOMAIN-SUFFIX,acgpost.com,PROXY
+DOMAIN-SUFFIX,agedm.org,PROXY
+DOMAIN-SUFFIX,aiqingyu1314.com,PROXY
+DOMAIN-SUFFIX,akianime.cc,PROXY
+DOMAIN-SUFFIX,appmovie.click,PROXY
+DOMAIN-SUFFIX,baimaodm.com,PROXY
+DOMAIN-SUFFIX,breadio.wiki,PROXY
+DOMAIN-SUFFIX,cctv5566.cc,PROXY
+DOMAIN-SUFFIX,cycani.org,PROXY
+DOMAIN-SUFFIX,cyfz.vip,PROXY
+DOMAIN-SUFFIX,d1dm.xyz,PROXY
+DOMAIN-SUFFIX,danmuhd.com,PROXY
+DOMAIN-SUFFIX,didahd.pro,PROXY
+DOMAIN-SUFFIX,dilidili.io,PROXY
+DOMAIN-SUFFIX,dilidili.online,PROXY
+DOMAIN-SUFFIX,dmfc002.cc,PROXY
+DOMAIN-SUFFIX,dmfengche.cc,PROXY
+DOMAIN-SUFFIX,dmmiku.com,PROXY
+DOMAIN-SUFFIX,dongmandaquan.vip,PROXY
+DOMAIN-SUFFIX,eacg1.com,PROXY
+DOMAIN-SUFFIX,fengchedm1.com,PROXY
+DOMAIN-SUFFIX,fengchedonman.com,PROXY
+DOMAIN-SUFFIX,fqdm.cc,PROXY
+DOMAIN-SUFFIX,girigirilove.com,PROXY
+DOMAIN-SUFFIX,girigirilove.top,PROXY
+DOMAIN-SUFFIX,haixingdmx.com,PROXY
+DOMAIN-SUFFIX,hanime1.me,PROXY
+DOMAIN-SUFFIX,hanimeone.me,PROXY
+DOMAIN-SUFFIX,hc34567.com,PROXY
+DOMAIN-SUFFIX,hqvod.com,PROXY
+DOMAIN-SUFFIX,huolangdm2.net,PROXY
+DOMAIN-SUFFIX,ikfan.com,PROXY
+DOMAIN-SUFFIX,imandaow.com,PROXY
+DOMAIN-SUFFIX,jibi.cc,PROXY
+DOMAIN-SUFFIX,jtdm.cc,PROXY
+DOMAIN-SUFFIX,jzsdm1.com,PROXY
+DOMAIN-SUFFIX,kimivod.com,PROXY
+DOMAIN-SUFFIX,knvod.com,PROXY
+DOMAIN-SUFFIX,libvio.site,PROXY
+DOMAIN-SUFFIX,lmm68.com,PROXY
+DOMAIN-SUFFIX,mayi520.cc,PROXY
+DOMAIN-SUFFIX,mgnacg.com,PROXY
+DOMAIN-SUFFIX,mifun.org,PROXY
+DOMAIN-SUFFIX,milimili.nl,PROXY
+DOMAIN-SUFFIX,mitaodm.com,PROXY
+DOMAIN-SUFFIX,moefan.cc,PROXY
+DOMAIN-SUFFIX,mwcy.net,PROXY
+DOMAIN-SUFFIX,mxdmp.com,PROXY
+DOMAIN-SUFFIX,pekolove.net,PROXY
+DOMAIN-SUFFIX,pzlyw.com,PROXY
+DOMAIN-SUFFIX,qdm66.com,PROXY
+DOMAIN-SUFFIX,rebozj.pro,PROXY
+DOMAIN-SUFFIX,sclgvs.com,PROXY
+DOMAIN-SUFFIX,senfun.in,PROXY
+DOMAIN-SUFFIX,sisidm.com,PROXY
+DOMAIN-SUFFIX,skr2.cc,PROXY
+DOMAIN-SUFFIX,ssrfun.com,PROXY
+DOMAIN-SUFFIX,tvtfun.net,PROXY
+DOMAIN-SUFFIX,vdm5.com,PROXY
+DOMAIN-SUFFIX,wyteam.net,PROXY
+DOMAIN-SUFFIX,xdmdy.cc,PROXY
+DOMAIN-SUFFIX,xfdm.pro,PROXY
+DOMAIN-SUFFIX,yhdmya.com,PROXY
+DOMAIN-SUFFIX,yinghua2.com,PROXY
+DOMAIN-SUFFIX,youknow.tv,PROXY
+DOMAIN-SUFFIX,zgacgn.com,PROXY
+

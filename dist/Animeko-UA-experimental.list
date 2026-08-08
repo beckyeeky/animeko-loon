@@ -1,0 +1,8 @@
+# Experimental USER-AGENT rules for Animeko (DIRECT)
+# Confirm real User-Agent in Loon → 最新请求 before enabling.
+# These match ALL hosts for that UA (broad). Prefer AND with DOMAIN-SUFFIX for CDN.
+
+# Animeko 曾用名 Ani；部分客户端 UA 可能含 Ani
+USER-AGENT,*Ani*,DIRECT
+# 若客户端 UA 含 Animeko 则命中
+USER-AGENT,*Animeko*,DIRECT

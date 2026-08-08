@@ -1,0 +1,67 @@
+name: Build Animeko Loon plugin
+
+on:
+  schedule:
+    # 每天 06:17 UTC
+    - cron: "17 6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "config/**"
+      - "scripts/**"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [rebuild]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-animeko-loon
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build plugin and rule lists
+        run: |
+          python3 scripts/build_plugin.py \
+            --config config/sources.json \
+            --out dist \
+            --cache .cache/sources
+
+      - name: Show summary
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r = json.loads(Path("dist/report.json").read_text())
+          print("generated_at", r["generated_at"])
+          print("media_roots", r["media_root_count"])
+          for s in r["sources"]:
+              status = "ok" if s["ok"] else f"FAIL {s.get('error')}"
+              print(f"- {s['id']}: {status}, bytes={s.get('bytes')}, hosts={len(s.get('hosts') or [])}, media_sources={s.get('media_sources')}")
+          PY
+          ls -la dist
+
+      - name: Commit dist if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist
+          if git diff --staged --quiet; then
+            echo "No changes in dist/"
+            exit 0
+          fi
+          git commit -m "chore(dist): rebuild Animeko Loon rules $(date -u +%Y-%m-%dT%H%MZ)"
+          git push
