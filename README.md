@@ -8,32 +8,33 @@
 
 Loon → 配置 → 插件 → 安装：
 
-| 策略 | Raw URL |
+| 策略 | 插件 Raw URL |
 |---|---|
-| 直连 `DIRECT` | `https://raw.githubusercontent.com/beckyeeky/animeko-loon/main/dist/Animeko-DIRECT.plugin` |
-| 代理 `PROXY`（安装后绑定策略组） | `https://raw.githubusercontent.com/beckyeeky/animeko-loon/main/dist/Animeko-PROXY.plugin` |
-| 拒绝 `REJECT` | `https://raw.githubusercontent.com/beckyeeky/animeko-loon/main/dist/Animeko-REJECT.plugin` |
+| 直连 `DIRECT` | https://raw.githubusercontent.com/beckyeeky/animeko-loon/main/dist/Animeko-DIRECT.plugin |
+| 代理 `PROXY`（安装后绑定策略组） | https://raw.githubusercontent.com/beckyeeky/animeko-loon/main/dist/Animeko-PROXY.plugin |
+| 拒绝 `REJECT` | https://raw.githubusercontent.com/beckyeeky/animeko-loon/main/dist/Animeko-REJECT.plugin |
 
-一键导入（DIRECT）：
+一键导入（DIRECT，需在 iOS 上点击）：
 
-```text
-loon://import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fbeckyeeky%2Fanimeko-loon%2Fmain%2Fdist%2FAnimeko-DIRECT.plugin
-```
+[在 Loon 中导入 Animeko-DIRECT 插件](loon://import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fbeckyeeky%2Fanimeko-loon%2Fmain%2Fdist%2FAnimeko-DIRECT.plugin)
 
 ### 方式 B：规则订阅（策略在订阅时选择）
 
-```text
+Loon → 配置 → 规则 → 订阅规则 → 添加：
+
 https://raw.githubusercontent.com/beckyeeky/animeko-loon/main/dist/Animeko.list
-```
 
-Loon → 配置 → 规则 → 订阅规则 → 添加上述 URL，策略选 `DIRECT` 或你的代理组。
+策略选 `DIRECT` 或你的代理组。
 
-jsDelivr 备用：
+### jsDelivr 备用（CDN 加速，内容与上面一致）
 
-```text
+插件（DIRECT）：
+
 https://cdn.jsdelivr.net/gh/beckyeeky/animeko-loon@main/dist/Animeko-DIRECT.plugin
+
+规则订阅：
+
 https://cdn.jsdelivr.net/gh/beckyeeky/animeko-loon@main/dist/Animeko.list
-```
 
 ## 默认数据源
 
