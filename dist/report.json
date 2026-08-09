@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T14:19:26Z",
+  "generated_at": "2026-08-09T02:24:27Z",
   "sources": [
     {
       "id": "online",
@@ -189,7 +189,6 @@
     "fqdm.cc",
     "girigirilove.com",
     "girigirilove.top",
-    "gitee.com",
     "haixingdmx.com",
     "hanime1.me",
     "hanimeone.me",
@@ -233,7 +232,7 @@
     "zgacgn.com"
   ],
   "raw_host_count": 89,
-  "media_root_count": 75,
+  "media_root_count": 74,
   "files": [
     "Animeko-DIRECT.plugin",
     "Animeko-PROXY.plugin",

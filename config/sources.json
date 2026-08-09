@@ -36,14 +36,6 @@
     "nyaa.land",
     "creamycake.org"
   ],
-  "hosting_rules": [
-    "DOMAIN,raw.githubusercontent.com",
-    "DOMAIN,gist.githubusercontent.com",
-    "DOMAIN-SUFFIX,githubusercontent.com",
-    "DOMAIN,github.com",
-    "DOMAIN-SUFFIX,gitee.com",
-    "DOMAIN-SUFFIX,jsdelivr.net"
-  ],
   "exclude_suffixes": [
     "baidu.com",
     "bcebos.com",
@@ -65,7 +57,11 @@
     "fastly.net",
     "apple.com",
     "icloud.com",
-    "mzstatic.com"
+    "mzstatic.com",
+    "github.com",
+    "githubusercontent.com",
+    "gitee.com",
+    "jsdelivr.net"
   ],
   "exclude_hosts": [
     "img1.baidu.com",
@@ -78,7 +74,12 @@
     "i.loli.net",
     "pic.danji100.com",
     "r2img.nanoacg.com",
-    "bkimg.cdn.bcebos.com"
+    "bkimg.cdn.bcebos.com",
+    "raw.githubusercontent.com",
+    "gist.githubusercontent.com",
+    "github.com",
+    "gitee.com",
+    "jsdelivr.net"
   ],
   "user_agents": [
     {

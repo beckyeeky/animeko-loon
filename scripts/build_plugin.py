@@ -140,7 +140,7 @@ def collect_from_sources(cfg: dict, cache_dir: Path | None = None) -> dict:
             continue
         media_roots.add(registrable_domain(host))
 
-    # core + hosting are added separately; drop overlaps from media_roots later
+    # core domains are added separately; drop overlaps from media_roots later
     core = {d.lower() for d in cfg.get("core_domains", [])}
     media_roots = {r for r in media_roots if r not in core and r not in exclude_suffixes}
 
@@ -151,19 +151,6 @@ def collect_from_sources(cfg: dict, cache_dir: Path | None = None) -> dict:
         "core_domains": sorted(core),
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
-
-
-def parse_hosting_rules(rules: Iterable[str]) -> list[tuple[str, str]]:
-    out: list[tuple[str, str]] = []
-    for line in rules:
-        line = line.strip()
-        if not line or line.startswith("#"):
-            continue
-        parts = line.split(",")
-        if len(parts) < 2:
-            continue
-        out.append((parts[0].strip().upper(), parts[1].strip().lower()))
-    return out
 
 
 def rule_lines(kind: str, value: str, policy: str | None = None) -> str:
@@ -187,17 +174,9 @@ def build_rule_body(
         lines.append(rule_lines("DOMAIN-SUFFIX", d, pol))
 
     lines.append("")
-    lines.append("# Source list hosting")
-    for kind, value in parse_hosting_rules(cfg.get("hosting_rules", [])):
-        lines.append(rule_lines(kind, value, pol))
-
-    lines.append("")
     lines.append("# Media source sites extracted from source JSON")
-    # avoid duplicating hosts already covered by hosting_rules / core
+    # avoid duplicating hosts already covered by core domains
     covered = {d.lower() for d in cfg.get("core_domains", [])}
-    for kind, value in parse_hosting_rules(cfg.get("hosting_rules", [])):
-        covered.add(value.lower())
-        covered.add(registrable_domain(value))
 
     for root in report["media_roots"]:
         if root in covered:
@@ -207,85 +186,6 @@ def build_rule_body(
         lines.append(rule_lines("DOMAIN-SUFFIX", root, pol))
 
     return lines
-
-
-def render_plugin(cfg: dict, report: dict, rule_body: list[str]) -> str:
-    meta = cfg["plugin"]
-    ua_patterns = [u["pattern"] for u in cfg.get("user_agents", []) if u.get("pattern")]
-    ua_default = ua_patterns[0] if ua_patterns else "*Animeko*"
-    ua_choices = ",".join(f'"{p}"' for p in (ua_patterns or ["*Animeko*", "*Ani*", "off"]))
-    if '"off"' not in ua_choices:
-        ua_choices = ua_choices + ',"off"' if ua_choices else '"off"'
-
-    # Argument-driven policy: Loon plugin rules support DIRECT/REJECT/PROXY only.
-    # PROXY lets the user pick a policy group in the plugin UI / runtime.
-    header = f"""#!name = {meta['name']}
-#!desc = {meta['desc']}
-#!author = {meta['author']}
-#!homepage = {meta['homepage']}
-#!icon = {meta['icon']}
-#!system = {meta['system']}
-#!system_version = {meta['system_version']}
-#!loon_version = {meta['loon_version']}
-#!tag = {meta['tag']}
-#!type = normal
-
-[Argument]
-policy = select,"DIRECT","PROXY","REJECT",tag=默认策略,desc=插件规则仅支持 DIRECT / PROXY / REJECT。PROXY 表示由你在 Loon 中绑定策略组。
-ua_mode = select,"off","on",tag=USER-AGENT 限定,desc=on 时仅当 UA 匹配下方模式才套用策略。须先在最新请求中确认 Animeko 真实 UA；默认 off（仅域名）。
-ua_pattern = select,{ua_choices},tag=UA 通配符,desc=仅 ua_mode=on 时生效。选 off 等于不按 UA 过滤。
-
-[Rule]
-# generated_at: {report['generated_at']}
-# sources_ok: {sum(1 for s in report['sources'] if s['ok'])}/{len(report['sources'])}
-# media_roots: {len(report['media_roots'])}
-# notes:
-# 1. iOS 不能按 App 进程分流；同域名的其他 App 也会命中。
-# 2. 源 JSON 多是检索站域名，播放 CDN/m3u8 常不在列表内，需按最新请求补 DOMAIN-SUFFIX。
-# 3. USER-AGENT 规则仅匹配 HTTP/HTTPS 且能看到 Header 的请求；默认关闭。
-# 4. 逻辑规则 AND 需要 Loon 3.1.7+。
-
-"""
-
-    # Domain-only rules (default path). policy argument is NOT expanded by Loon Rule engine
-    # the same way as Script enable=; plugin rules are static. We emit DIRECT as default
-    # and also ship a PROXY variant file. For selectable policy inside one plugin, emit
-    # three parallel blocks gated is not supported for Rule. Practical approach:
-    # generate rules with DIRECT (primary), and document PROXY/REJECT list variants.
-    #
-    # However user asked to define policy in plugin. Loon plugin rule policy can be PROXY
-    # meaning user-selected group — but still static per line. We'll generate using
-    # DIRECT by default in the main plugin, and produce companion plugins for PROXY.
-    #
-    # Better approach used by many plugins: fixed DIRECT in main plugin; Argument only
-    # documents intent; plus separate list files without policy for rule-subscription.
-    #
-    # User explicitly wants selectable policy. Since Rule lines cannot reference
-    # ${policy} like Rewrite V2, we generate the main plugin with DIRECT and additional
-    # plugins Animeko-PROXY.plugin / Animeko-REJECT.plugin, OR one plugin with PROXY
-    # (user binds group) as "custom".
-    #
-    # Final design:
-    # - Animeko.plugin : policy = DIRECT (most common: bypass proxy)
-    # - Animeko-PROXY.plugin : policy = PROXY
-    # - lists without policy for subscription
-    # - optional UA AND rules only in experimental section comments + separate file
-
-    body_lines = []
-    for line in rule_body:
-        if not line or line.startswith("#"):
-            body_lines.append(line)
-            continue
-        body_lines.append(line)
-
-    # Experimental UA section as comments + separate enabled block file content note
-    ua_note = """
-# --- USER-AGENT experimental (disabled by default; copy to local [Rule] after confirming UA) ---
-# USER-AGENT,*Animeko*,DIRECT
-# USER-AGENT,*Ani*,DIRECT
-# AND,((USER-AGENT,*Animeko*),(DOMAIN-SUFFIX,example-cdn.com)),DIRECT
-"""
-    return header + "\n".join(body_lines) + "\n" + ua_note
 
 
 def render_plugin_with_policy(cfg: dict, report: dict, policy: str) -> str:

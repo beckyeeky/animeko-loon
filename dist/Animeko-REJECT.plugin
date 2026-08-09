@@ -10,10 +10,10 @@
 #!type = normal
 
 [Rule]
-# generated_at: 2026-08-08T14:19:26Z
+# generated_at: 2026-08-09T02:24:27Z
 # policy: REJECT
 # sources_ok: 3/3
-# media_roots: 75
+# media_roots: 74
 # iOS 不能按 App 进程分流；播放 CDN 可能不在源 JSON 内。
 
 # Animeko / Ani core services
@@ -30,14 +30,6 @@ DOMAIN-SUFFIX,acg.rip,REJECT
 DOMAIN-SUFFIX,nyaa.si,REJECT
 DOMAIN-SUFFIX,nyaa.land,REJECT
 DOMAIN-SUFFIX,creamycake.org,REJECT
-
-# Source list hosting
-DOMAIN,raw.githubusercontent.com,REJECT
-DOMAIN,gist.githubusercontent.com,REJECT
-DOMAIN-SUFFIX,githubusercontent.com,REJECT
-DOMAIN,github.com,REJECT
-DOMAIN-SUFFIX,gitee.com,REJECT
-DOMAIN-SUFFIX,jsdelivr.net,REJECT
 
 # Media source sites extracted from source JSON
 DOMAIN-SUFFIX,11kt.net,REJECT
