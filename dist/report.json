@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T06:58:39Z",
+  "generated_at": "2026-08-16T06:59:52Z",
   "sources": [
     {
       "id": "online",
@@ -112,8 +112,8 @@
       "url": "https://sub.creamycake.org/v1/css1.json",
       "ok": true,
       "error": null,
-      "bytes": 50999,
-      "media_sources": 19,
+      "bytes": 48858,
+      "media_sources": 18,
       "hosts": [
         "11kt.net",
         "ani.girigirilove.com",
@@ -133,7 +133,6 @@
         "www.hc34567.com",
         "www.jibi.cc",
         "www.rebozj.pro",
-        "www.tvtfun.net",
         "www.vdm5.com",
         "www.yinghua2.com",
         "www.youknow.tv"
