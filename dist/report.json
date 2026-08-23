@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T06:59:57Z",
+  "generated_at": "2026-08-23T07:01:40Z",
   "sources": [
     {
       "id": "online",
@@ -7,7 +7,7 @@
       "url": "https://raw.githubusercontent.com/MajoSissi/animeko-source/main/dist/online.json",
       "ok": true,
       "error": null,
-      "bytes": 170734,
+      "bytes": 170663,
       "media_sources": 63,
       "hosts": [
         "11kt.net",
