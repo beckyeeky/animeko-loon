@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T12:36:55Z",
+  "generated_at": "2026-10-01T13:18:25Z",
   "sources": [
     {
       "id": "online",
@@ -120,7 +120,7 @@
         "bkimg.cdn.bcebos.com",
         "dilidili.io",
         "dm1.xfdm.pro",
-        "girigirilove.top",
+        "girigirilove.com",
         "gitee.com",
         "hanime1.me",
         "i.loli.net",
@@ -230,7 +230,7 @@
     "youknow.tv",
     "zgacgn.com"
   ],
-  "raw_host_count": 89,
+  "raw_host_count": 90,
   "media_root_count": 74,
   "files": [
     "Animeko-DIRECT.plugin",
