@@ -10,10 +10,10 @@
 #!type = normal
 
 [Rule]
-# generated_at: 2026-10-13T14:14:01Z
+# generated_at: 2026-10-14T11:55:08Z
 # policy: DIRECT
 # sources_ok: 3/3
-# media_roots: 74
+# media_roots: 75
 # iOS 不能按 App 进程分流；播放 CDN 可能不在源 JSON 内。
 
 # Animeko / Ani core services
@@ -36,6 +36,7 @@ DOMAIN-SUFFIX,11kt.net,DIRECT
 DOMAIN-SUFFIX,1anime.org,DIRECT
 DOMAIN-SUFFIX,1anime2026.cc,DIRECT
 DOMAIN-SUFFIX,1anime2026.me,DIRECT
+DOMAIN-SUFFIX,2kdm.com,DIRECT
 DOMAIN-SUFFIX,605dm.com,DIRECT
 DOMAIN-SUFFIX,7sefun.top,DIRECT
 DOMAIN-SUFFIX,9tdm.com,DIRECT

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T14:14:01Z",
+  "generated_at": "2026-10-14T11:55:08Z",
   "sources": [
     {
       "id": "online",
@@ -112,8 +112,8 @@
       "url": "https://sub.creamycake.org/v1/css1.json",
       "ok": true,
       "error": null,
-      "bytes": 48861,
-      "media_sources": 18,
+      "bytes": 51444,
+      "media_sources": 19,
       "hosts": [
         "11kt.net",
         "ani.girigirilove.com",
@@ -125,6 +125,7 @@
         "hanime1.me",
         "i.loli.net",
         "senfun.in",
+        "www.2kdm.com",
         "www.didahd.pro",
         "www.dongmandaquan.vip",
         "www.eacg1.com",
@@ -159,6 +160,7 @@
     "1anime.org",
     "1anime2026.cc",
     "1anime2026.me",
+    "2kdm.com",
     "605dm.com",
     "7sefun.top",
     "9tdm.com",
@@ -230,8 +232,8 @@
     "youknow.tv",
     "zgacgn.com"
   ],
-  "raw_host_count": 90,
-  "media_root_count": 74,
+  "raw_host_count": 91,
+  "media_root_count": 75,
   "files": [
     "Animeko-DIRECT.plugin",
     "Animeko-PROXY.plugin",

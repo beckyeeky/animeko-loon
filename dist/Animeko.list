@@ -1,7 +1,7 @@
 # Animeko Loon rule list (no policy — choose policy when subscribing)
-# generated_at: 2026-10-13T14:14:01Z
+# generated_at: 2026-10-14T11:55:08Z
 # homepage: https://github.com/beckyeeky/animeko-loon
-# media_roots: 74
+# media_roots: 75
 
 # Animeko / Ani core services
 DOMAIN-SUFFIX,animeko.org
@@ -23,6 +23,7 @@ DOMAIN-SUFFIX,11kt.net
 DOMAIN-SUFFIX,1anime.org
 DOMAIN-SUFFIX,1anime2026.cc
 DOMAIN-SUFFIX,1anime2026.me
+DOMAIN-SUFFIX,2kdm.com
 DOMAIN-SUFFIX,605dm.com
 DOMAIN-SUFFIX,7sefun.top
 DOMAIN-SUFFIX,9tdm.com
