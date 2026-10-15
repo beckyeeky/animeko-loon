@@ -10,7 +10,7 @@
 #!type = normal
 
 [Rule]
-# generated_at: 2026-10-15T11:31:43Z
+# generated_at: 2026-10-15T14:04:42Z
 # policy: DIRECT
 # sources_ok: 3/3
 # media_roots: 75
@@ -19,8 +19,6 @@
 # Animeko / Ani core services
 DOMAIN-SUFFIX,animeko.org,DIRECT
 DOMAIN-SUFFIX,myani.org,DIRECT
-DOMAIN-SUFFIX,bgm.tv,DIRECT
-DOMAIN-SUFFIX,bangumi.tv,DIRECT
 DOMAIN-SUFFIX,dandanplay.net,DIRECT
 DOMAIN-SUFFIX,dandanplay.com,DIRECT
 DOMAIN-SUFFIX,mikanani.me,DIRECT

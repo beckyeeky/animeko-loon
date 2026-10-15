@@ -46,7 +46,9 @@ https://cdn.jsdelivr.net/gh/beckyeeky/animeko-loon@main/dist/Animeko.list
 | bt1 | `https://sub.creamycake.org/v1/bt1.json` |
 | css1 | `https://sub.creamycake.org/v1/css1.json` |
 
-另含 Animeko 官方与核心依赖域名：`animeko.org`、`myani.org`、`bgm.tv`、`dandanplay.net`、`mikanani.me` 等，以及源列表托管域名（GitHub / Gitee / creamycake）。
+另含 Animeko 官方与核心依赖域名：`animeko.org`、`myani.org`、`dandanplay.net`、`mikanani.me` 等。
+
+不接管 `bgm.tv`、`bangumi.tv`、`chii.in` 及其子域，交由现有配置决定策略。GitHub / Gitee / jsDelivr 等通用托管域名同样不纳入分流。
 
 ## 自动构建
 

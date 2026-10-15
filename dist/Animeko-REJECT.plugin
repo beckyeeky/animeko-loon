@@ -10,7 +10,7 @@
 #!type = normal
 
 [Rule]
-# generated_at: 2026-10-15T11:31:43Z
+# generated_at: 2026-10-15T14:04:42Z
 # policy: REJECT
 # sources_ok: 3/3
 # media_roots: 75
@@ -19,8 +19,6 @@
 # Animeko / Ani core services
 DOMAIN-SUFFIX,animeko.org,REJECT
 DOMAIN-SUFFIX,myani.org,REJECT
-DOMAIN-SUFFIX,bgm.tv,REJECT
-DOMAIN-SUFFIX,bangumi.tv,REJECT
 DOMAIN-SUFFIX,dandanplay.net,REJECT
 DOMAIN-SUFFIX,dandanplay.com,REJECT
 DOMAIN-SUFFIX,mikanani.me,REJECT

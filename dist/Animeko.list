@@ -1,13 +1,11 @@
 # Animeko Loon rule list (no policy — choose policy when subscribing)
-# generated_at: 2026-10-15T11:31:43Z
+# generated_at: 2026-10-15T14:04:42Z
 # homepage: https://github.com/beckyeeky/animeko-loon
 # media_roots: 75
 
 # Animeko / Ani core services
 DOMAIN-SUFFIX,animeko.org
 DOMAIN-SUFFIX,myani.org
-DOMAIN-SUFFIX,bgm.tv
-DOMAIN-SUFFIX,bangumi.tv
 DOMAIN-SUFFIX,dandanplay.net
 DOMAIN-SUFFIX,dandanplay.com
 DOMAIN-SUFFIX,mikanani.me

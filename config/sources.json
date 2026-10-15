@@ -24,8 +24,6 @@
   "core_domains": [
     "animeko.org",
     "myani.org",
-    "bgm.tv",
-    "bangumi.tv",
     "dandanplay.net",
     "dandanplay.com",
     "mikanani.me",
@@ -37,6 +35,9 @@
     "creamycake.org"
   ],
   "exclude_suffixes": [
+    "bgm.tv",
+    "bangumi.tv",
+    "chii.in",
     "baidu.com",
     "bcebos.com",
     "meituan.net",

@@ -10,7 +10,7 @@
 #!type = normal
 
 [Rule]
-# generated_at: 2026-10-15T11:31:43Z
+# generated_at: 2026-10-15T14:04:42Z
 # policy: PROXY
 # sources_ok: 3/3
 # media_roots: 75
@@ -19,8 +19,6 @@
 # Animeko / Ani core services
 DOMAIN-SUFFIX,animeko.org,PROXY
 DOMAIN-SUFFIX,myani.org,PROXY
-DOMAIN-SUFFIX,bgm.tv,PROXY
-DOMAIN-SUFFIX,bangumi.tv,PROXY
 DOMAIN-SUFFIX,dandanplay.net,PROXY
 DOMAIN-SUFFIX,dandanplay.com,PROXY
 DOMAIN-SUFFIX,mikanani.me,PROXY
