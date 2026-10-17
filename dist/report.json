@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T11:26:44Z",
+  "generated_at": "2026-10-17T10:46:24Z",
   "sources": [
     {
       "id": "online",
@@ -99,7 +99,7 @@
       "url": "https://sub.creamycake.org/v1/bt1.json",
       "ok": true,
       "error": null,
-      "bytes": 1003,
+      "bytes": 2034,
       "media_sources": 2,
       "hosts": [
         "garden.breadio.wiki",
@@ -112,11 +112,12 @@
       "url": "https://sub.creamycake.org/v1/css1.json",
       "ok": true,
       "error": null,
-      "bytes": 51444,
-      "media_sources": 19,
+      "bytes": 100426,
+      "media_sources": 18,
       "hosts": [
         "11kt.net",
         "ani.girigirilove.com",
+        "api.xifanacg.com",
         "bkimg.cdn.bcebos.com",
         "dilidili.io",
         "dm1.xfdm.pro",
@@ -124,6 +125,7 @@
         "gitee.com",
         "hanime1.me",
         "i.loli.net",
+        "next.xifanacg.com",
         "senfun.in",
         "www.2kdm.com",
         "www.didahd.pro",
@@ -225,13 +227,14 @@
     "wyteam.net",
     "xdmdy.cc",
     "xfdm.pro",
+    "xifanacg.com",
     "yhdmya.com",
     "yinghua2.com",
     "youknow.tv",
     "zgacgn.com"
   ],
-  "raw_host_count": 91,
-  "media_root_count": 75,
+  "raw_host_count": 93,
+  "media_root_count": 76,
   "files": [
     "Animeko-DIRECT.plugin",
     "Animeko-PROXY.plugin",
