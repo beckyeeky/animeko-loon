@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T11:41:24Z",
+  "generated_at": "2026-10-24T11:03:46Z",
   "sources": [
     {
       "id": "online",
@@ -112,13 +112,14 @@
       "url": "https://sub.creamycake.org/v1/css1.json",
       "ok": true,
       "error": null,
-      "bytes": 100426,
+      "bytes": 100168,
       "media_sources": 18,
       "hosts": [
         "11kt.net",
         "ani.girigirilove.com",
         "api.xifanacg.com",
         "bkimg.cdn.bcebos.com",
+        "cdn.l-il.cn",
         "dilidili.io",
         "dm1.xfdm.pro",
         "girigirilove.com",
@@ -126,6 +127,7 @@
         "hanime1.me",
         "i.loli.net",
         "next.xifanacg.com",
+        "player.mcue.cc",
         "senfun.in",
         "www.2kdm.com",
         "www.didahd.pro",
@@ -137,7 +139,7 @@
         "www.jibi.cc",
         "www.rebozj.pro",
         "www.vdm5.com",
-        "www.yinghua2.com",
+        "www.yinhuadm.cc",
         "www.youknow.tv"
       ]
     }
@@ -203,9 +205,11 @@
     "jzsdm1.com",
     "kimivod.com",
     "knvod.com",
+    "l-il.cn",
     "libvio.site",
     "lmm68.com",
     "mayi520.cc",
+    "mcue.cc",
     "mgnacg.com",
     "mifun.org",
     "milimili.nl",
@@ -230,11 +234,12 @@
     "xifanacg.com",
     "yhdmya.com",
     "yinghua2.com",
+    "yinhuadm.cc",
     "youknow.tv",
     "zgacgn.com"
   ],
-  "raw_host_count": 93,
-  "media_root_count": 76,
+  "raw_host_count": 96,
+  "media_root_count": 79,
   "files": [
     "Animeko-DIRECT.plugin",
     "Animeko-PROXY.plugin",

@@ -10,10 +10,10 @@
 #!type = normal
 
 [Rule]
-# generated_at: 2026-10-23T11:41:24Z
+# generated_at: 2026-10-24T11:03:46Z
 # policy: REJECT
 # sources_ok: 3/3
-# media_roots: 76
+# media_roots: 79
 # iOS 不能按 App 进程分流；播放 CDN 可能不在源 JSON 内。
 
 # Animeko / Ani core services
@@ -77,9 +77,11 @@ DOMAIN-SUFFIX,jtdm.cc,REJECT
 DOMAIN-SUFFIX,jzsdm1.com,REJECT
 DOMAIN-SUFFIX,kimivod.com,REJECT
 DOMAIN-SUFFIX,knvod.com,REJECT
+DOMAIN-SUFFIX,l-il.cn,REJECT
 DOMAIN-SUFFIX,libvio.site,REJECT
 DOMAIN-SUFFIX,lmm68.com,REJECT
 DOMAIN-SUFFIX,mayi520.cc,REJECT
+DOMAIN-SUFFIX,mcue.cc,REJECT
 DOMAIN-SUFFIX,mgnacg.com,REJECT
 DOMAIN-SUFFIX,mifun.org,REJECT
 DOMAIN-SUFFIX,milimili.nl,REJECT
@@ -104,6 +106,7 @@ DOMAIN-SUFFIX,xfdm.pro,REJECT
 DOMAIN-SUFFIX,xifanacg.com,REJECT
 DOMAIN-SUFFIX,yhdmya.com,REJECT
 DOMAIN-SUFFIX,yinghua2.com,REJECT
+DOMAIN-SUFFIX,yinhuadm.cc,REJECT
 DOMAIN-SUFFIX,youknow.tv,REJECT
 DOMAIN-SUFFIX,zgacgn.com,REJECT
 
