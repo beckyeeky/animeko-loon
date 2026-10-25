@@ -7,6 +7,7 @@ acgpost.com
 ani.girigirilove.com
 anime.d1dm.xyz
 api.xifanacg.com
+bg.girigirilove.com
 bgm.girigirilove.com
 bkimg.cdn.bcebos.com
 cctv5566.cc
@@ -33,6 +34,7 @@ img1.baidu.com
 ios.mifun.org
 kimivod.com
 m.baimaodm.com
+m3u8.girigirilove.com
 milimili.nl
 next.xifanacg.com
 nyaa.land
