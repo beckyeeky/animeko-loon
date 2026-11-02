@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T13:27:04Z",
+  "generated_at": "2026-11-02T15:57:13Z",
   "sources": [
     {
       "id": "online",
@@ -112,11 +112,13 @@
       "url": "https://sub.creamycake.org/v1/css1.json",
       "ok": true,
       "error": null,
-      "bytes": 99367,
+      "bytes": 102063,
       "media_sources": 18,
       "hosts": [
         "11kt.net",
         "ani.girigirilove.com",
+        "ani7.b-cdn.net",
+        "anime7.top",
         "api.xifanacg.com",
         "bg.girigirilove.com",
         "bkimg.cdn.bcebos.com",
@@ -173,7 +175,9 @@
     "agedm.org",
     "aiqingyu1314.com",
     "akianime.cc",
+    "anime7.top",
     "appmovie.click",
+    "b-cdn.net",
     "baimaodm.com",
     "breadio.wiki",
     "cctv5566.cc",
@@ -240,8 +244,8 @@
     "youknow.tv",
     "zgacgn.com"
   ],
-  "raw_host_count": 98,
-  "media_root_count": 79,
+  "raw_host_count": 100,
+  "media_root_count": 81,
   "files": [
     "Animeko-DIRECT.plugin",
     "Animeko-PROXY.plugin",
