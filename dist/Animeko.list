@@ -1,7 +1,7 @@
 # Animeko Loon rule list (no policy — choose policy when subscribing)
-# generated_at: 2026-11-21T14:40:35Z
+# generated_at: 2026-11-22T14:36:42Z
 # homepage: https://github.com/beckyeeky/animeko-loon
-# media_roots: 81
+# media_roots: 82
 
 # Animeko / Ani core services
 DOMAIN-SUFFIX,animeko.org
@@ -21,7 +21,6 @@ DOMAIN-SUFFIX,11kt.net
 DOMAIN-SUFFIX,1anime.org
 DOMAIN-SUFFIX,1anime2026.cc
 DOMAIN-SUFFIX,1anime2026.me
-DOMAIN-SUFFIX,2kdm.com
 DOMAIN-SUFFIX,605dm.com
 DOMAIN-SUFFIX,7sefun.top
 DOMAIN-SUFFIX,9tdm.com
@@ -45,8 +44,8 @@ DOMAIN-SUFFIX,dilidili.io
 DOMAIN-SUFFIX,dilidili.online
 DOMAIN-SUFFIX,dmfc002.cc
 DOMAIN-SUFFIX,dmfengche.cc
+DOMAIN-SUFFIX,dmghg1.com
 DOMAIN-SUFFIX,dmmiku.com
-DOMAIN-SUFFIX,dongmandaquan.vip
 DOMAIN-SUFFIX,eacg1.com
 DOMAIN-SUFFIX,fengchedm1.com
 DOMAIN-SUFFIX,fengchedonman.com
@@ -68,6 +67,7 @@ DOMAIN-SUFFIX,kimivod.com
 DOMAIN-SUFFIX,knvod.com
 DOMAIN-SUFFIX,l-il.cn
 DOMAIN-SUFFIX,libvio.site
+DOMAIN-SUFFIX,lmm22.com
 DOMAIN-SUFFIX,lmm68.com
 DOMAIN-SUFFIX,mayi520.cc
 DOMAIN-SUFFIX,mcue.cc
@@ -76,6 +76,7 @@ DOMAIN-SUFFIX,mifun.org
 DOMAIN-SUFFIX,milimili.nl
 DOMAIN-SUFFIX,mitaodm.com
 DOMAIN-SUFFIX,moefan.cc
+DOMAIN-SUFFIX,mutefun.tv
 DOMAIN-SUFFIX,mwcy.net
 DOMAIN-SUFFIX,mxdmp.com
 DOMAIN-SUFFIX,pekolove.net
@@ -95,6 +96,6 @@ DOMAIN-SUFFIX,xfdm.pro
 DOMAIN-SUFFIX,xifanacg.com
 DOMAIN-SUFFIX,yhdmya.com
 DOMAIN-SUFFIX,yinghua2.com
-DOMAIN-SUFFIX,yinhuadm.cc
+DOMAIN-SUFFIX,yinhuadm.xyz
 DOMAIN-SUFFIX,youknow.tv
 DOMAIN-SUFFIX,zgacgn.com

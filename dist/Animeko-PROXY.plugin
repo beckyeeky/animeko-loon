@@ -10,10 +10,10 @@
 #!type = normal
 
 [Rule]
-# generated_at: 2026-11-21T14:40:35Z
+# generated_at: 2026-11-22T14:36:42Z
 # policy: PROXY
 # sources_ok: 3/3
-# media_roots: 81
+# media_roots: 82
 # iOS 不能按 App 进程分流；播放 CDN 可能不在源 JSON 内。
 
 # Animeko / Ani core services
@@ -34,7 +34,6 @@ DOMAIN-SUFFIX,11kt.net,PROXY
 DOMAIN-SUFFIX,1anime.org,PROXY
 DOMAIN-SUFFIX,1anime2026.cc,PROXY
 DOMAIN-SUFFIX,1anime2026.me,PROXY
-DOMAIN-SUFFIX,2kdm.com,PROXY
 DOMAIN-SUFFIX,605dm.com,PROXY
 DOMAIN-SUFFIX,7sefun.top,PROXY
 DOMAIN-SUFFIX,9tdm.com,PROXY
@@ -58,8 +57,8 @@ DOMAIN-SUFFIX,dilidili.io,PROXY
 DOMAIN-SUFFIX,dilidili.online,PROXY
 DOMAIN-SUFFIX,dmfc002.cc,PROXY
 DOMAIN-SUFFIX,dmfengche.cc,PROXY
+DOMAIN-SUFFIX,dmghg1.com,PROXY
 DOMAIN-SUFFIX,dmmiku.com,PROXY
-DOMAIN-SUFFIX,dongmandaquan.vip,PROXY
 DOMAIN-SUFFIX,eacg1.com,PROXY
 DOMAIN-SUFFIX,fengchedm1.com,PROXY
 DOMAIN-SUFFIX,fengchedonman.com,PROXY
@@ -81,6 +80,7 @@ DOMAIN-SUFFIX,kimivod.com,PROXY
 DOMAIN-SUFFIX,knvod.com,PROXY
 DOMAIN-SUFFIX,l-il.cn,PROXY
 DOMAIN-SUFFIX,libvio.site,PROXY
+DOMAIN-SUFFIX,lmm22.com,PROXY
 DOMAIN-SUFFIX,lmm68.com,PROXY
 DOMAIN-SUFFIX,mayi520.cc,PROXY
 DOMAIN-SUFFIX,mcue.cc,PROXY
@@ -89,6 +89,7 @@ DOMAIN-SUFFIX,mifun.org,PROXY
 DOMAIN-SUFFIX,milimili.nl,PROXY
 DOMAIN-SUFFIX,mitaodm.com,PROXY
 DOMAIN-SUFFIX,moefan.cc,PROXY
+DOMAIN-SUFFIX,mutefun.tv,PROXY
 DOMAIN-SUFFIX,mwcy.net,PROXY
 DOMAIN-SUFFIX,mxdmp.com,PROXY
 DOMAIN-SUFFIX,pekolove.net,PROXY
@@ -108,7 +109,7 @@ DOMAIN-SUFFIX,xfdm.pro,PROXY
 DOMAIN-SUFFIX,xifanacg.com,PROXY
 DOMAIN-SUFFIX,yhdmya.com,PROXY
 DOMAIN-SUFFIX,yinghua2.com,PROXY
-DOMAIN-SUFFIX,yinhuadm.cc,PROXY
+DOMAIN-SUFFIX,yinhuadm.xyz,PROXY
 DOMAIN-SUFFIX,youknow.tv,PROXY
 DOMAIN-SUFFIX,zgacgn.com,PROXY
 
